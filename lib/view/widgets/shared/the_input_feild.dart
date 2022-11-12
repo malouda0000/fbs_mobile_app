@@ -39,7 +39,7 @@ class TheInputField extends StatelessWidget {
           border: InputBorder.none,
           icon: Padding(
             padding: const EdgeInsets.symmetric(
-              horizontal: 10,
+              horizontal: 18,
             ),
             child: Icon(
               color: AppColor.kPrimaryColor,

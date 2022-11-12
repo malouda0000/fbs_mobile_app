@@ -9,7 +9,7 @@ const double theDefaultPadding = 15.0;
 const double theDefaultElevation = 3.0;
 const double theSmallPadding = 10.0;
 
-const SizedBox emptySpace = const SizedBox(
+const SizedBox emptySpace = SizedBox(
   height: 10,
   width: 10,
 );

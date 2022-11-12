@@ -16,11 +16,12 @@ class RectangularIcon extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: 60,
-        height: 60,
-        padding: EdgeInsets.all(
-          theDefaultPadding,
-        ),
+        alignment: Alignment.center,
+        width: 45,
+        height: 45,
+        // padding: EdgeInsets.all(
+        //   theDefaultPadding,
+        // ),
         decoration: BoxDecoration(
           color: AppColor.kColorThree,
           borderRadius: BorderRadius.circular(theSmallPadding),
