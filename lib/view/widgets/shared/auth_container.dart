@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class AuthContainer extends StatelessWidget {
-  Widget mainWidget;
-  AuthContainer({
+  final Widget mainWidget;
+  const AuthContainer({
     Key? key,
     required this.mainWidget,
   }) : super(key: key);
@@ -20,10 +20,11 @@ class AuthContainer extends StatelessWidget {
             left: -Get.width * .5,
             top: -600,
             width: Get.width * 2,
+            height: Get.width * 2,
             child: Center(
               child: Container(
-                padding: EdgeInsets.only(bottom: 10),
-                decoration: BoxDecoration(
+                padding: const EdgeInsets.only(bottom: 10),
+                decoration: const BoxDecoration(
                   // boxShadow: [
                   //   BoxShadow(
                   //     color: AppColor.kGrayColor,
@@ -35,34 +36,35 @@ class AuthContainer extends StatelessWidget {
                 ),
                 height: Get.width * 2,
                 width: Get.width * 2,
-                child: Stack(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    Positioned(
-                      // mainicon positioned
-                      width: Get.width * 2,
-                      bottom: 10,
-                      // left: Get.width * 1,
-                      child: Center(
-                        child: Container(
-                          // logo container
-                          // clipBehavior: Clip.hardEdge,
-                          padding: EdgeInsets.all(5),
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            // color: AppColor.kColorFour,
-                            color: Theme.of(context).scaffoldBackgroundColor,
-                          ),
-                          child: Image(
-                            // fit: BoxFit.,
-                            width: 150,
-                            color: AppColor.kColorThree,
-                            image: AssetImage(
-                              AppImages.mainIcon,
-                            ),
-                          ),
+                    Container(
+                      width: 150,
+                      height: 150,
+                      // logo container
+                      // clipBehavior: Clip.hardEdge,
+                      // padding: const EdgeInsets.all(5),
+
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        // color: AppColor.kColorFour,
+                        color: Theme.of(context).scaffoldBackgroundColor,
+                      ),
+                      child: const Image(
+                        // fit: BoxFit.,
+                        width: 110,
+                        height: 110,
+                        color: AppColor.kColorThree,
+                        image: AssetImage(
+                          AppImages.mainIcon,
                         ),
                       ),
                     ),
+                    emptySpace,
+                    emptySpace,
                   ],
                 ),
               ),
@@ -70,7 +72,7 @@ class AuthContainer extends StatelessWidget {
           ),
           Center(
             child: Padding(
-              padding: EdgeInsets.all(
+              padding: const EdgeInsets.all(
                 theDefaultPadding,
               ),
               child: Column(
@@ -79,8 +81,9 @@ class AuthContainer extends StatelessWidget {
                   //   height: 300,
                   // ),
 
-                  SizedBox(
-                    height: Get.height * .35,
+                  const SizedBox(
+                    // height: Get.height * .35,
+                    height: 220,
                   ),
                   Expanded(
                     // the body
