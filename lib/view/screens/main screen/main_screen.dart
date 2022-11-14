@@ -1,4 +1,5 @@
 import 'package:fbs_mobile_app/controllers/bottom_nav_controller.dart';
+import 'package:fbs_mobile_app/view/screens/settings/settings.dart';
 import 'package:fbs_mobile_app/view/widgets/shared/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:fbs_mobile_app/core/constants/constants.dart';
@@ -19,8 +20,9 @@ class MainScreen extends StatelessWidget {
           ),
           child: GetBuilder<BottomNavBarControllerImp>(
               builder: (bottomNavBarControllerImp) {
-            return bottomNavBarControllerImp
-                .bodyWidgestsList[bottomNavBarControllerImp.currentBody];
+            // return bottomNavBarControllerImp
+            //     .bodyWidgestsList[bottomNavBarControllerImp.currentBody];
+            return const Settings();
           }),
         ),
       ),

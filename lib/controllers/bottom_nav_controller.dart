@@ -1,5 +1,6 @@
 import 'package:fbs_mobile_app/core/constants/constants.dart';
 import 'package:fbs_mobile_app/view/screens/home%20screen/home_screen.dart';
+import 'package:fbs_mobile_app/view/screens/settings/settings.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -28,7 +29,7 @@ class BottomNavBarControllerImp extends BottomNavBarController {
     HomeScreen(),
 
     Temp(theTitle: '4'),
-    Temp(theTitle: '5'),
+    Settings(),
   ];
 
   @override

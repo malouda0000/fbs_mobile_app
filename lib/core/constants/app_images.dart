@@ -26,6 +26,7 @@ class AppImages {
   /////
   static const String cameraIcon = 'assets/fbs/cameraicon.png';
   static const String userImage = 'assets/fbs/userImage.png';
+  static const String meImage = 'assets/images/me.jpg';
   static const String cardIcon = 'assets/fbs/cardicon.png';
   static const String ideaIcon = 'assets/fbs/ideaicon.png';
 

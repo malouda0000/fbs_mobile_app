@@ -3,13 +3,12 @@ import 'package:fbs_mobile_app/core/constants/app_images.dart';
 import 'package:fbs_mobile_app/core/constants/constants.dart';
 import 'package:fbs_mobile_app/models/data%20source/bank_services.dart';
 import 'package:fbs_mobile_app/models/modles/user_cards.dart';
-import 'package:fbs_mobile_app/view/screens/home%20screen/widgets/user_card.dart';
-import 'package:fbs_mobile_app/view/screens/main%20screen/widgets/bank_card.dart';
-import 'package:fbs_mobile_app/view/screens/main%20screen/widgets/services_card.dart';
+import 'package:fbs_mobile_app/view/screens/home%20screen/widgets/suggested_services.dart';
+import 'package:fbs_mobile_app/view/screens/home%20screen/widgets/bank_card.dart';
+import 'package:fbs_mobile_app/view/screens/home%20screen/widgets/services_card.dart';
 import 'package:fbs_mobile_app/view/widgets/shared/big_title_builder.dart';
 import 'package:fbs_mobile_app/view/widgets/shared/rectangle_icon.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -90,28 +89,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             emptySpace,
-            BigTitleBuilder(
-              theTitle: 'Suggested Services :',
-              textColor: AppColor.kPrimaryColor,
-            ),
-            emptySpace,
-            GridView.builder(
-                physics: const NeverScrollableScrollPhysics(),
-                shrinkWrap: true,
-                itemCount: theBankingservices.length,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  // crossAxisCount: 3,
-
-                  crossAxisCount: 3,
-                  // childAspectRatio: .7,
-                  crossAxisSpacing: theDefaultPadding,
-                  mainAxisSpacing: theDefaultPadding,
-                ),
-                itemBuilder: (context, index) {
-                  return ServicesCard(
-                    index: index,
-                  );
-                }),
+            const SuggestedServices(),
           ],
         ),
         emptySpace,
@@ -120,41 +98,3 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-
-// class CustomCard extends StatelessWidget {
-//   const CustomCard({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container();
-//   }
-// }
-
-
-
-// class TheMianBody extends StatelessWidget {
-//   const TheMianBody({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: const SafeArea(
-//         child: Padding(
-//           padding: EdgeInsets.all(
-//             theDefaultPadding,
-//           ),
-//           child: HomeScreen(),
-//         ),
-//       ),
-//       floatingActionButton: FloatingActionButton(
-//         backgroundColor: AppColor.kPrimaryColor,
-//         // onPressed: _incrementCounter,
-
-//         onPressed: () {},
-//         tooltip: 'Increment',
-//         child: const Icon(Icons.add),
-//       ),
-//     );
-//   }
-// }

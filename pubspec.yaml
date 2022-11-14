@@ -138,6 +138,7 @@ flutter:
 
   assets:
     - assets/fbs/
+    - assets/images/
 
   fonts:
     - family: Cairo

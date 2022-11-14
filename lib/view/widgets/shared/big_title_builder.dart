@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class BigTitleBuilder extends StatelessWidget {
-  String theTitle;
-  Color textColor;
-  BigTitleBuilder({
+  final String theTitle;
+  final Color textColor;
+  const BigTitleBuilder({
     super.key,
     required this.theTitle,
     required this.textColor,
