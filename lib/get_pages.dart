@@ -1,6 +1,6 @@
 import 'package:fbs_mobile_app/view/screens/auth/signin_screen.dart';
 import 'package:fbs_mobile_app/view/screens/auth/signup.dart';
-import 'package:fbs_mobile_app/view/screens/home%20screen/home_screen.dart';
+import 'package:fbs_mobile_app/view/screens/main%20screen/main_screen.dart';
 import 'package:get/get.dart';
 
 import 'view/screens/custom onbording/custom_onbording.dart';
@@ -22,7 +22,7 @@ class AppRoute {
   static const String successfullySignedupScreen = '/succSignedupScreen';
 
 // main screens
-  static const String homeScreen = '/homeScreen';
+  static const String mainScreen = '/mainScreen';
   static const String detailsScreen = '/detailsScreen';
   static const String foodMenueScreen = '/foodMenueScreen';
   static const String cartScreen = '/cartScreen';
@@ -96,8 +96,8 @@ class GetPages {
 
 //     // main screens
     GetPage(
-      name: AppRoute.homeScreen,
-      page: () => const HomeScreen(),
+      name: AppRoute.mainScreen,
+      page: () => const MainScreen(),
       // binding: LocalizationBindings(),
     ),
 //     GetPage(

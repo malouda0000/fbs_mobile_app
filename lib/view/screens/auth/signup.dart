@@ -56,7 +56,7 @@ class SignupScreen extends StatelessWidget {
           BigButtonBuilder(
             theTitle: 'sign up',
             onPressed: () {
-              Get.toNamed(AppRoute.homeScreen);
+              Get.toNamed(AppRoute.mainScreen);
             },
           ),
           // Spacer(),

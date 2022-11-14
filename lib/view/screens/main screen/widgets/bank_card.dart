@@ -26,6 +26,7 @@ class BankCard extends StatelessWidget {
       height: 220,
       decoration: BoxDecoration(
         color: AppColor.kColorThree,
+        // color: AppColor.kLightPrimaryColor,
         borderRadius: BorderRadius.circular(
           theSmallPadding,
         ),

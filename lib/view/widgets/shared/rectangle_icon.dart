@@ -3,9 +3,9 @@ import 'package:fbs_mobile_app/core/constants/constants.dart';
 import 'package:flutter/material.dart';
 
 class RectangularIcon extends StatelessWidget {
-  void Function()? onTap;
-  IconData theIcon;
-  RectangularIcon({
+  final void Function()? onTap;
+  final IconData theIcon;
+  const RectangularIcon({
     Key? key,
     required this.theIcon,
     required this.onTap,
@@ -24,6 +24,7 @@ class RectangularIcon extends StatelessWidget {
         // ),
         decoration: BoxDecoration(
           color: AppColor.kColorThree,
+          // color: AppColor.kLightPrimaryColor,
           borderRadius: BorderRadius.circular(theSmallPadding),
         ),
         child: Icon(

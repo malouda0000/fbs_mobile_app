@@ -44,7 +44,7 @@ class SigninScreen extends StatelessWidget {
           BigButtonBuilder(
             theTitle: 'sign in',
             onPressed: () {
-              Get.toNamed(AppRoute.homeScreen);
+              Get.toNamed(AppRoute.mainScreen);
             },
           ),
 

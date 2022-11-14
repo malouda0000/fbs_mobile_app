@@ -23,9 +23,7 @@ class TheInputField extends StatelessWidget {
         borderRadius: BorderRadius.circular(
           40,
         ),
-        color: AppColor.kPrimaryColor.withOpacity(
-          .2,
-        ),
+        color: AppColor.kLightPrimaryColor,
       ),
       child: TextField(
         decoration: InputDecoration(
@@ -46,9 +44,7 @@ class TheInputField extends StatelessWidget {
               theIcon,
             ),
           ),
-          fillColor: AppColor.kPrimaryColor.withOpacity(
-            .2,
-          ),
+          fillColor: AppColor.kLightPrimaryColor,
         ),
       ),
     );
