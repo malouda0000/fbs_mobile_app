@@ -21,7 +21,7 @@ class BottomNavBar extends StatelessWidget {
       cornerRadius: theDefaultRaduis,
       style: TabStyle.fixedCircle,
       shadowColor: AppColor.kColorTwo,
-      initialActiveIndex: 4,
+      initialActiveIndex: 2,
       activeColor: Theme.of(context).scaffoldBackgroundColor,
       // activeColor: AppColor.kColorThree,
       // color: AppColor.kColorThree,

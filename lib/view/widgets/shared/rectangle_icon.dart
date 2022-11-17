@@ -29,7 +29,8 @@ class RectangularIcon extends StatelessWidget {
         ),
         child: Icon(
           theIcon,
-          color: AppColor.kPrimaryColor,
+          // color: AppColor.kPrimaryColor,
+          // color: AppColor.kColorTwo,
         ),
       ),
     );

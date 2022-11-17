@@ -14,22 +14,11 @@ class BottomNavBarControllerImp extends BottomNavBarController {
   // TabController bottNavTapCont = 0;
   int currentBody = 2;
   List<Widget> bodyWidgestsList = const [
-    // Expanded(
-    //   child: Container(
-    //       padding: EdgeInsets.all(
-    //         theDefaultPadding,
-    //       ),
-    //       color: Colors.indigo,
-    //       // width: 30,
-    //       // height: 30,
-    //       child: Temp(theTitle: '2')),
-    // ),
-    Temp(theTitle: '1'),
-    Temp(theTitle: '2'),
+    Temp(theTitle: 'My cards'),
+    Temp(theTitle: 'ATM locations'),
     HomeScreen(),
-
-    Temp(theTitle: '4'),
-    Settings(),
+    Temp(theTitle: 'support'),
+    SettingsScreen(),
   ];
 
   @override

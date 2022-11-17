@@ -4,8 +4,8 @@ import 'package:fbs_mobile_app/core/constants/constants.dart';
 import 'package:fbs_mobile_app/view/widgets/shared/big_title_builder.dart';
 import 'package:flutter/material.dart';
 
-class Settings extends StatelessWidget {
-  const Settings({super.key});
+class SettingsScreen extends StatelessWidget {
+  const SettingsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
