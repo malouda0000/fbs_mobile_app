@@ -3,6 +3,7 @@ import 'package:fbs_mobile_app/core/constants/app_images.dart';
 import 'package:fbs_mobile_app/core/constants/constants.dart';
 import 'package:fbs_mobile_app/models/data%20source/bank_services.dart';
 import 'package:fbs_mobile_app/models/modles/user_cards.dart';
+import 'package:fbs_mobile_app/view/screens/home%20screen/widgets/suggested_services.dart';
 import 'package:fbs_mobile_app/view/screens/home%20screen/widgets/bank_card.dart';
 import 'package:fbs_mobile_app/view/screens/home%20screen/widgets/services_card.dart';
 import 'package:fbs_mobile_app/view/widgets/shared/big_title_builder.dart';
@@ -18,7 +19,7 @@ class HomeScreen extends StatelessWidget {
       // mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         // emptySpace,
-        const BigTitleBuilder(
+        BigTitleBuilder(
           theTitle: AppConstants.userName,
           textColor: AppColor.kPrimaryColor,
         ),
@@ -45,10 +46,7 @@ class HomeScreen extends StatelessWidget {
               width: 45,
               height: 45,
               decoration: const BoxDecoration(
-                  // color: Theme.of(context).iconTheme.color,
                   image: DecorationImage(
-                      // colorFilter: Theme.of(context).iconTheme.color,
-
                       image: AssetImage(
                 AppImages.userImage,
               ))),
@@ -91,27 +89,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             emptySpace,
-            const BigTitleBuilder(
-              theTitle: 'Suggested Services :',
-              textColor: AppColor.kPrimaryColor,
-            ),
-            emptySpace,
-            GridView.builder(
-                physics: const NeverScrollableScrollPhysics(),
-                shrinkWrap: true,
-                itemCount: theBankingservices.length,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  // crossAxisCount: 3,
-                  crossAxisCount: 3,
-                  // childAspectRatio: .7,
-                  crossAxisSpacing: theDefaultPadding,
-                  mainAxisSpacing: theDefaultPadding,
-                ),
-                itemBuilder: (context, index) {
-                  return ServicesCard(
-                    index: index,
-                  );
-                }),
+            const SuggestedServices(),
           ],
         ),
         emptySpace,

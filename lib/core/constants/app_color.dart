@@ -16,7 +16,7 @@ class AppColor {
   // static const kColorThree = Color(0xFF84a98c);
   // static const kColorFour = Color(0xFFcad2c5);
 
-  static const kPrimaryColor = Color(0xFFEB5E28);
+  static const kPrimaryColor = Color(0xFFeb5e28);
   static final kLightPrimaryColor = kPrimaryColor.withOpacity(.2);
   static const kColorOne = Color(0xFF252422);
   static const kColorTwo = Color(0xFF403d39);

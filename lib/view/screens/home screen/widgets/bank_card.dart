@@ -50,36 +50,22 @@ class BankCard extends StatelessWidget {
                 // emptySpace,
                 Text(
                   userEmail,
-                  style: TextStyle(
-                    color: Theme.of(context).iconTheme.color,
-                  ),
                 ),
 
                 Row(
                   children: [
                     Text(
                       '$cashNo : ',
-                      style: TextStyle(
-                        color: Theme.of(context).iconTheme.color,
-                      ),
                     ),
-
                     // emptySpace,
                     Text(
                       'sdg'.toUpperCase(),
-                      style: TextStyle(
-                        color: Theme.of(context).iconTheme.color,
-                      ),
                     ),
                   ],
                 ),
                 Text(
                   // AppConstants.userCardNo,
                   cardNo,
-
-                  style: TextStyle(
-                    color: Theme.of(context).iconTheme.color,
-                  ),
                 )
               ],
             ),
@@ -89,8 +75,7 @@ class BankCard extends StatelessWidget {
             children: [
               Image.asset(
                 AppImages.moneyIcon,
-                // color: AppColor.kPrimaryColor,
-                color: Theme.of(context).iconTheme.color,
+                color: AppColor.kPrimaryColor,
                 width: 70,
                 // alignment: Alignment.bottom,
               ),

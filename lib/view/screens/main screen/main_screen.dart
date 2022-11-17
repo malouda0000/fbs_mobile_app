@@ -20,9 +20,9 @@ class MainScreen extends StatelessWidget {
           ),
           child: GetBuilder<BottomNavBarControllerImp>(
               builder: (bottomNavBarControllerImp) {
-            return bottomNavBarControllerImp
-                .bodyWidgestsList[bottomNavBarControllerImp.currentBody];
-            // return const SettingsScreen();
+            // return bottomNavBarControllerImp
+            //     .bodyWidgestsList[bottomNavBarControllerImp.currentBody];
+            return const Settings();
           }),
         ),
       ),
