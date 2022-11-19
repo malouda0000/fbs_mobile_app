@@ -140,11 +140,16 @@ class UserCard extends StatelessWidget {
                 margin: const EdgeInsets.all(
                   theDefaultPadding,
                 ),
-                width: 130,
-                height: 130,
+                width: 125,
+                height: 125,
                 clipBehavior: Clip.hardEdge,
-                decoration: const BoxDecoration(
-                  // border: BoxBorder(),
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: AppColor.kPrimaryColor,
+                    width: 3.0,
+                    strokeAlign: StrokeAlign.outside,
+                    style: BorderStyle.solid,
+                  ),
                   shape: BoxShape.circle,
 
                   // image: DecorationImage(image: )
