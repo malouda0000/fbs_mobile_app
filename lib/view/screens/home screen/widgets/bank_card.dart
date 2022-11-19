@@ -25,7 +25,9 @@ class BankCard extends StatelessWidget {
       width: Get.width - (theDefaultPadding * 2),
       height: 220,
       decoration: BoxDecoration(
-        color: AppColor.kColorThree,
+        // color: AppColor.kColorThree,
+        color: AppColor.kPrimaryColor.withOpacity(.1),
+
         // color: AppColor.kLightPrimaryColor,
         borderRadius: BorderRadius.circular(
           theSmallPadding,
@@ -75,7 +77,8 @@ class BankCard extends StatelessWidget {
             children: [
               Image.asset(
                 AppImages.moneyIcon,
-                color: AppColor.kPrimaryColor,
+                // color: AppColor.kPrimaryColor,
+                color: Theme.of(context).iconTheme.color,
                 width: 70,
                 // alignment: Alignment.bottom,
               ),

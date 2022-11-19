@@ -21,7 +21,9 @@ class ServicesCard extends StatelessWidget {
       //   .2,
       // ),
       decoration: BoxDecoration(
-          color: AppColor.kColorThree,
+          // color: AppColor.kColorThree,
+          color: AppColor.kPrimaryColor.withOpacity(.1),
+
           // color: AppColor.kLightPrimaryColor,
           borderRadius: BorderRadius.circular(
             theSmallPadding,

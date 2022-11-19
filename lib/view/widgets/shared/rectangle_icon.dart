@@ -23,13 +23,14 @@ class RectangularIcon extends StatelessWidget {
         //   theDefaultPadding,
         // ),
         decoration: BoxDecoration(
-          color: AppColor.kColorThree,
+          // color: AppColor.kColorThree,
+          color: AppColor.kPrimaryColor.withOpacity(.1),
           // color: AppColor.kLightPrimaryColor,
           borderRadius: BorderRadius.circular(theSmallPadding),
         ),
         child: Icon(
           theIcon,
-          color: AppColor.kPrimaryColor,
+          // color: AppColor.kPrimaryColor,
         ),
       ),
     );

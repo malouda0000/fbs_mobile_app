@@ -19,10 +19,10 @@ class Settings extends StatelessWidget {
 
     return ListView(
       children: const [
-        // emptySpace,
-        // emptySpace,
-        // UserCard(),
-        // emptySpace,
+        emptySpace,
+        emptySpace,
+        UserCard(),
+        emptySpace,
         emptySpace,
         SettingCard(),
         emptySpace,
