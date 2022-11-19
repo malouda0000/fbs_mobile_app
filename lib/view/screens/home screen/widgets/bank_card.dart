@@ -35,55 +35,53 @@ class BankCard extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // Container(
-                //   decoration: BoxDecoration(
-                //     color: AppColor.kPrimaryColor,
-                //   ),
-                // ),
-                BigTitleBuilder(
-                  theTitle: bankName.toUpperCase(),
-                  textColor: AppColor.kPrimaryColor,
-                ),
-                // emptySpace,
-                Text(
-                  userEmail,
-                ),
-
-                Row(
-                  children: [
-                    Text(
-                      '$cashNo : ',
-                    ),
-                    // emptySpace,
-                    Text(
-                      'sdg'.toUpperCase(),
-                    ),
-                  ],
-                ),
-                Text(
-                  // AppConstants.userCardNo,
-                  cardNo,
-                )
-              ],
-            ),
-          ),
           Column(
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.asset(
-                AppImages.moneyIcon,
-                // color: AppColor.kPrimaryColor,
-                color: Theme.of(context).iconTheme.color,
-                width: 70,
-                // alignment: Alignment.bottom,
+              // Container(
+              //   decoration: BoxDecoration(
+              //     color: AppColor.kPrimaryColor,
+              //   ),
+              // ),
+              BigTitleBuilder(
+                theTitle: bankName.toUpperCase(),
+                textColor: AppColor.kPrimaryColor,
               ),
+              // emptySpace,
+              Text(
+                userEmail,
+              ),
+
+              Row(
+                children: [
+                  Text(
+                    '$cashNo : ',
+                  ),
+                  // emptySpace,
+                  Text(
+                    'sdg'.toUpperCase(),
+                  ),
+                ],
+              ),
+              Text(
+                // AppConstants.userCardNo,
+                cardNo,
+              )
             ],
           ),
+          // Column(
+          //   mainAxisAlignment: MainAxisAlignment.end,
+          //   children: [
+          //     Image.asset(
+          //       AppImages.moneyIcon,
+          //       // color: AppColor.kPrimaryColor,
+          //       color: Theme.of(context).iconTheme.color,
+          //       width: 70,
+          //       // alignment: Alignment.bottom,
+          //     ),
+          //   ],
+          // ),
         ],
       ),
     );

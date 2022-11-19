@@ -6,9 +6,11 @@ import 'package:fbs_mobile_app/models/modles/user_cards.dart';
 import 'package:fbs_mobile_app/view/screens/home%20screen/widgets/suggested_services.dart';
 import 'package:fbs_mobile_app/view/screens/home%20screen/widgets/bank_card.dart';
 import 'package:fbs_mobile_app/view/screens/home%20screen/widgets/services_card.dart';
+import 'package:fbs_mobile_app/view/screens/home%20screen/widgets/user_cards_list.dart';
 import 'package:fbs_mobile_app/view/widgets/shared/big_title_builder.dart';
 import 'package:fbs_mobile_app/view/widgets/shared/rectangle_icon.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -17,6 +19,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       // mainAxisAlignment: MainAxisAlignment.center,
+      // shrinkWrap: true,
       children: <Widget>[
         // emptySpace,
         BigTitleBuilder(
@@ -45,11 +48,16 @@ class HomeScreen extends StatelessWidget {
             Container(
               width: 45,
               height: 45,
-              decoration: const BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage(
-                AppImages.userImage,
-              ))),
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    AppImages.meImage,
+                  ),
+                ),
+                borderRadius: BorderRadius.circular(
+                  theSmallPadding,
+                ),
+              ),
             ),
           ],
         ),
@@ -58,36 +66,7 @@ class HomeScreen extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: const [
-                  BankCard(
-                    // first card
-                    bankName: CardOne.bankName,
-                    userEmail: CardOne.userEmail,
-                    cashNo: CardOne.cashNo,
-                    cardNo: CardOne.userCardNo,
-                  ),
-                  emptySpace,
-                  BankCard(
-                    // second card
-                    bankName: CardTwo.bankName,
-                    userEmail: CardTwo.userEmail,
-                    cashNo: CardTwo.cashNo,
-                    cardNo: CardTwo.userCardNo,
-                  ),
-                  emptySpace,
-                  BankCard(
-                    // third card
-                    bankName: CardThree.bankName,
-                    userEmail: CardThree.userEmail,
-                    cashNo: CardThree.cashNo,
-                    cardNo: CardThree.userCardNo,
-                  ),
-                ],
-              ),
-            ),
+            UserCardsList(),
             emptySpace,
             const SuggestedServices(),
           ],
