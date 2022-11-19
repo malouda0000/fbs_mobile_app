@@ -28,18 +28,21 @@ class OnBordingControllerImp extends CustomOnBordingController {
   }
 
   @override
-  onPageChanged(int index) {
-    currentPage = index;
+  skip() {
+    // currentPage = mainCustomOnBordingList.length;
+
+    // pageController.animateToPage(currentPage,
+    //     duration: Duration(seconds: 2), curve: Curves.easeInOut);
+
+    Get.offAllNamed(AppRoute.signInScreen);
 
     update();
   }
 
   @override
-  skip() {
-    currentPage = mainCustomOnBordingList.length;
+  onPageChanged(int index) {
+    currentPage = index;
 
-    pageController.animateToPage(currentPage,
-        duration: Duration(seconds: 2), curve: Curves.easeInOut);
     update();
   }
 

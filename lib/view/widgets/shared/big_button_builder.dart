@@ -17,24 +17,23 @@ class BigButtonBuilder extends StatelessWidget {
     return SizedBox(
       height: 50,
       width: double.infinity,
-      child: Expanded(
-        child: Container(
-          clipBehavior: Clip.hardEdge,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(40),
-          ),
-          child: MaterialButton(
-            color: AppColor.kPrimaryColor,
-            elevation: 5,
-            // shape: ShapeBorder.lerp(a, b, t),
+      child: Container(
+        width: double.infinity,
+        clipBehavior: Clip.hardEdge,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(40),
+        ),
+        child: MaterialButton(
+          color: AppColor.kPrimaryColor,
+          elevation: 5,
+          // shape: ShapeBorder.lerp(a, b, t),
 
-            height: 70,
-            child: BigTitleBuilder(
-              textColor: AppColor.kColorFour,
-              theTitle: theTitle,
-            ),
-            onPressed: onPressed,
+          height: 70,
+          child: BigTitleBuilder(
+            textColor: AppColor.kColorFour,
+            theTitle: theTitle,
           ),
+          onPressed: onPressed,
         ),
       ),
     );
