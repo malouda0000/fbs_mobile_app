@@ -12,7 +12,7 @@ abstract class BottomNavBarController extends GetxController {
 class BottomNavBarControllerImp extends BottomNavBarController {
   // late PageController pageController;
   // TabController bottNavTapCont = 0;
-  int currentBody = 2;
+  int currentBody = 4;
   List<Widget> bodyWidgestsList = const [
     // Expanded(
     //   child: Container(
@@ -24,11 +24,11 @@ class BottomNavBarControllerImp extends BottomNavBarController {
     //       // height: 30,
     //       child: Temp(theTitle: '2')),
     // ),
-    Temp(theTitle: '1'),
-    Temp(theTitle: '2'),
+    MyTempWidget(theTitle: '1'),
+    MyTempWidget(theTitle: '2'),
     HomeScreen(),
 
-    Temp(theTitle: '4'),
+    MyTempWidget(theTitle: '4'),
     Settings(),
   ];
 
@@ -45,9 +45,9 @@ class BottomNavBarControllerImp extends BottomNavBarController {
   }
 }
 
-class Temp extends StatelessWidget {
+class MyTempWidget extends StatelessWidget {
   final String theTitle;
-  const Temp({super.key, required this.theTitle});
+  const MyTempWidget({super.key, required this.theTitle});
 
   @override
   Widget build(BuildContext context) {

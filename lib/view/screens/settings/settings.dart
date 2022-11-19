@@ -125,79 +125,77 @@ class UserCard extends StatelessWidget {
     return Card(
       color: AppColor.kPrimaryColor.withOpacity(.1),
       clipBehavior: Clip.hardEdge,
-      child: Expanded(
-        child: Column(
-          children: [
-            Row(
-              children: [
-                // CircleAvatar(
-                //   backgroundImage:  ImageProvider(),
-                //   child: Image.asset(
-                //     AppImages.meImage,
-                //   ),
-                // ),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              // CircleAvatar(
+              //   backgroundImage:  ImageProvider(),
+              //   child: Image.asset(
+              //     AppImages.meImage,
+              //   ),
+              // ),
 
-                Container(
-                  margin: const EdgeInsets.all(
-                    theDefaultPadding,
-                  ),
-                  width: 130,
-                  height: 130,
-                  clipBehavior: Clip.hardEdge,
-                  decoration: const BoxDecoration(
-                    // border: BoxBorder(),
-                    shape: BoxShape.circle,
-
-                    // image: DecorationImage(image: )
-                  ),
-                  child: Image.asset(
-                    AppImages.meImage,
-                    fit: BoxFit.fill,
-                  ),
+              Container(
+                margin: const EdgeInsets.all(
+                  theDefaultPadding,
                 ),
-                emptySpace,
-                emptySpace,
-                Expanded(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Text(
-                        AppConstants.userName,
-                        style: TextStyle(
-                            color: AppColor.kPrimaryColor,
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      // Spacer(),
-                      // emptySpace,
-                      Text(
-                        AppConstants.userPhone,
-                        style: TextStyle(
-                            color: AppColor.kPrimaryColor,
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      // Spacer(),
-                      // emptySpace,
-                      Text(
-                        AppConstants.userEmail,
-                        style: TextStyle(
+                width: 130,
+                height: 130,
+                clipBehavior: Clip.hardEdge,
+                decoration: const BoxDecoration(
+                  // border: BoxBorder(),
+                  shape: BoxShape.circle,
+
+                  // image: DecorationImage(image: )
+                ),
+                child: Image.asset(
+                  AppImages.meImage,
+                  fit: BoxFit.fill,
+                ),
+              ),
+              emptySpace,
+              emptySpace,
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    Text(
+                      AppConstants.userName,
+                      style: TextStyle(
                           color: AppColor.kPrimaryColor,
-                        ),
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    // Spacer(),
+                    // emptySpace,
+                    Text(
+                      AppConstants.userPhone,
+                      style: TextStyle(
+                          color: AppColor.kPrimaryColor,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    // Spacer(),
+                    // emptySpace,
+                    Text(
+                      AppConstants.userEmail,
+                      style: TextStyle(
+                        color: AppColor.kPrimaryColor,
                       ),
-                    ],
-                  ),
-                )
-              ],
-            ),
-            Container(
-              height: 3,
-              width: double.infinity,
-              color: AppColor.kPrimaryColor,
-            ),
-          ],
-        ),
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
+          Container(
+            height: 3,
+            width: double.infinity,
+            color: AppColor.kPrimaryColor,
+          ),
+        ],
       ),
     );
   }
