@@ -19,21 +19,6 @@ class ThemeControllerImp extends ThemeController {
   }
 
   changeThemeMode(value) {
-    // isDarkMod = value;
-
-    // if (value == true) {
-    //   Get.changeTheme(MyThemes.customDarkTheme);
-    //   mySharedPrefes!.setBool('dark', false);
-    //   // isDarkMod = value;
-    // } else if (value == false) {
-    //   Get.changeTheme(MyThemes.customLightTheme);
-    //   mySharedPrefes!.setBool('dark', true);
-    //   // isDarkMod = value;
-    // }
-
-    // Get.changeThemeMode(value ? ThemeMode.light : ThemeMode.dark);
-    // update();
-
     isDarkMod.value = value;
     Get.changeThemeMode(
       isDarkMod.value ? ThemeMode.dark : ThemeMode.light,

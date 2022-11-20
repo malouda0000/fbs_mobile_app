@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
         // const UserCardsList(),
         const CardCarouselSlider(),
         // emptySpace,
-        const SuggestedServices(),
+        SuggestedServices(),
         emptySpace,
         emptySpace,
       ],

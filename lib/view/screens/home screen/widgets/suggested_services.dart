@@ -6,7 +6,12 @@ import 'package:fbs_mobile_app/view/widgets/shared/big_title_builder.dart';
 import 'package:flutter/material.dart';
 
 class SuggestedServices extends StatelessWidget {
-  const SuggestedServices({super.key});
+  // final bool isUnderDev;
+  const SuggestedServices({
+    super.key,
+
+    // required this.isUnderDev,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -37,6 +42,7 @@ class SuggestedServices extends StatelessWidget {
               itemBuilder: (context, index) {
                 return ServicesCard(
                   index: index,
+                  // isUnderDev: ,
                 );
               }),
         ],
