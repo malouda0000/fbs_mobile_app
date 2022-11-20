@@ -18,6 +18,8 @@ class BottomNavBar extends StatelessWidget {
       // color: AppColor.pr,
       backgroundColor: AppColor.kPrimaryColor,
       // controller: ,
+      height: 45,
+      top: -25,
       cornerRadius: theDefaultRaduis,
       style: TabStyle.fixedCircle,
       shadowColor: AppColor.kColorTwo,
