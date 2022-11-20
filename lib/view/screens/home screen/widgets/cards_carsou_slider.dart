@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:fbs_mobile_app/controllers/home_controller.dart';
 import 'package:fbs_mobile_app/core/constants/app_color.dart';
 import 'package:fbs_mobile_app/core/constants/app_images.dart';
 import 'package:fbs_mobile_app/core/constants/constants.dart';
@@ -12,30 +13,43 @@ class CardCarouselSlider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CarouselSlider(
-      items: userCardsList,
-      options: CarouselOptions(
-        // height: 400,
-        height: 220,
+    HomeScreenControllerImp homeScreenControllerImp =
+        Get.put(HomeScreenControllerImp());
+    return ListView(
+      shrinkWrap: true,
+      physics: NeverScrollableScrollPhysics(),
+      children: [
+        CarouselSlider(
+          items: userCardsList,
+          options: CarouselOptions(
+            // height: 400,
+            height: 220,
 
-        // disableCenter: false,
-        // padEnds: false,
-        onPageChanged: (index, reason) {},
+            // disableCenter: false,
+            // padEnds: false,
+            onPageChanged: (index, reason) {
+              homeScreenControllerImp.carouselSliderChanged(index);
+            },
 
-        // aspectRatio: 16 / 9,
-        viewportFraction: 0.95,
-        // viewportFraction: 0.8,
-        initialPage: 0,
-        enableInfiniteScroll: true,
-        reverse: false,
-        autoPlay: true,
-        autoPlayInterval: Duration(seconds: 5),
-        autoPlayAnimationDuration: Duration(milliseconds: 1500),
-        autoPlayCurve: Curves.bounceOut,
-        // enlargeCenterPage: true,
-        // onPageChanged: callbackFunction,
-        scrollDirection: Axis.horizontal,
-      ),
+            // aspectRatio: 16 / 9,
+            viewportFraction: 0.95,
+            // viewportFraction: 0.8,
+            initialPage: 0,
+            enableInfiniteScroll: true,
+            reverse: false,
+            autoPlay: true,
+            autoPlayInterval: Duration(seconds: 5),
+            autoPlayAnimationDuration: Duration(milliseconds: 1500),
+            autoPlayCurve: Curves.ease,
+            // enlargeCenterPage: true,
+            // onPageChanged: callbackFunction,
+            scrollDirection: Axis.horizontal,
+          ),
+        ),
+        emptySpace,
+        // emptySpace,
+        CarouslSlidingDots(),
+      ],
     );
   }
 }
@@ -63,6 +77,29 @@ List<Widget> userCardsList = [
     userEmail: CardThree.userEmail,
     cashNo: CardThree.cashNo,
     cardNo: CardThree.userCardNo,
+  ),
+  BankCard(
+    // first card
+    bankName: CardFour.bankName,
+    userEmail: CardFour.userEmail,
+    cashNo: CardFour.cashNo,
+    cardNo: CardFour.userCardNo,
+  ),
+  // emptySpace,
+  BankCard(
+    // second card
+    bankName: CardFive.bankName,
+    userEmail: CardFive.userEmail,
+    cashNo: CardFive.cashNo,
+    cardNo: CardFive.userCardNo,
+  ),
+  // emptySpace,
+  BankCard(
+    // third card
+    bankName: CardSix.bankName,
+    userEmail: CardSix.userEmail,
+    cashNo: CardSix.cashNo,
+    cardNo: CardSix.userCardNo,
   ),
 ];
 
@@ -153,6 +190,46 @@ class BankCard extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class CarouslSlidingDots extends StatelessWidget {
+  const CarouslSlidingDots({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GetBuilder<HomeScreenControllerImp>(
+      builder: (homeScreenControllerImp) {
+        return Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ...List.generate(
+              userCardsList.length,
+              (index) {
+                return AnimatedContainer(
+                  duration: Duration(
+                    milliseconds: 900,
+                  ),
+                  width: homeScreenControllerImp.carousIndex == index ? 20 : 6,
+                  height: 6,
+                  margin: const EdgeInsets.all(
+                    // theDefaultPadding,
+
+                    2,
+                  ),
+                  decoration: BoxDecoration(
+                      color: AppColor.kPrimaryColor,
+                      // shape: BoxShape.circle,
+                      borderRadius: BorderRadius.circular(15)),
+                );
+              },
+            ),
+          ],
+        );
+      },
     );
   }
 }
