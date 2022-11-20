@@ -18,6 +18,9 @@ class Settings extends StatelessWidget {
     // Get.put(ThemeControllerImp());
 
     return ListView(
+      padding: EdgeInsets.symmetric(
+        horizontal: theDefaultPadding,
+      ),
       children: const [
         emptySpace,
         emptySpace,
@@ -226,11 +229,13 @@ class UserCard extends StatelessWidget {
               // ),
 
               Container(
+                /* user image container */
+
                 margin: const EdgeInsets.all(
                   theDefaultPadding,
                 ),
-                width: 125,
-                height: 125,
+                width: 100,
+                height: 100,
                 clipBehavior: Clip.hardEdge,
                 decoration: BoxDecoration(
                   border: Border.all(
@@ -249,7 +254,7 @@ class UserCard extends StatelessWidget {
                 ),
               ),
               emptySpace,
-              emptySpace,
+              // emptySpace,
               Expanded(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
