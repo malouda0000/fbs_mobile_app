@@ -1,6 +1,7 @@
 import 'package:fbs_mobile_app/core/constants/constants.dart';
 import 'package:fbs_mobile_app/view/screens/home%20screen/home_screen.dart';
 import 'package:fbs_mobile_app/view/screens/settings/settings.dart';
+import 'package:fbs_mobile_app/view/widgets/shared/under_development_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -24,11 +25,10 @@ class BottomNavBarControllerImp extends BottomNavBarController {
     //       // height: 30,
     //       child: Temp(theTitle: '2')),
     // ),
-    MyTempWidget(theTitle: '1'),
-    MyTempWidget(theTitle: '2'),
+    UnderDevelopment(),
+    UnderDevelopment(),
     HomeScreen(),
-
-    MyTempWidget(theTitle: '4'),
+    UnderDevelopment(),
     Settings(),
   ];
 

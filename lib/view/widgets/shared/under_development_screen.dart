@@ -35,7 +35,7 @@ class UnderDevelopment extends StatelessWidget {
                     Text(
                       // AppLocal.thisPageIsUnderDevelopment.tr,
 
-                      'this screen is \n under Development',
+                      'this featur is \n under Development',
                       textAlign: TextAlign.center,
                       style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                           color: AppColor.kPrimaryColor,

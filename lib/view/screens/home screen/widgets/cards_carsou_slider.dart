@@ -3,6 +3,7 @@ import 'package:fbs_mobile_app/controllers/home_controller.dart';
 import 'package:fbs_mobile_app/core/constants/app_color.dart';
 import 'package:fbs_mobile_app/core/constants/app_images.dart';
 import 'package:fbs_mobile_app/core/constants/constants.dart';
+import 'package:fbs_mobile_app/get_pages.dart';
 import 'package:fbs_mobile_app/models/data%20source/user_cards.dart';
 import 'package:fbs_mobile_app/view/widgets/shared/big_title_builder.dart';
 import 'package:flutter/material.dart';
@@ -61,6 +62,10 @@ List<Widget> userCardsList = [
     userEmail: CardOne.userEmail,
     cashNo: CardOne.cashNo,
     cardNo: CardOne.userCardNo,
+
+    onTap: () {
+      Get.toNamed(AppRoute.underDevelopmentScreen);
+    },
   ),
   // emptySpace,
   BankCard(
@@ -69,6 +74,10 @@ List<Widget> userCardsList = [
     userEmail: CardTwo.userEmail,
     cashNo: CardTwo.cashNo,
     cardNo: CardTwo.userCardNo,
+
+    onTap: () {
+      Get.toNamed(AppRoute.underDevelopmentScreen);
+    },
   ),
   // emptySpace,
   BankCard(
@@ -77,6 +86,10 @@ List<Widget> userCardsList = [
     userEmail: CardThree.userEmail,
     cashNo: CardThree.cashNo,
     cardNo: CardThree.userCardNo,
+
+    onTap: () {
+      Get.toNamed(AppRoute.underDevelopmentScreen);
+    },
   ),
   BankCard(
     // first card
@@ -84,6 +97,10 @@ List<Widget> userCardsList = [
     userEmail: CardFour.userEmail,
     cashNo: CardFour.cashNo,
     cardNo: CardFour.userCardNo,
+
+    onTap: () {
+      Get.toNamed(AppRoute.underDevelopmentScreen);
+    },
   ),
   // emptySpace,
   BankCard(
@@ -92,6 +109,10 @@ List<Widget> userCardsList = [
     userEmail: CardFive.userEmail,
     cashNo: CardFive.cashNo,
     cardNo: CardFive.userCardNo,
+
+    onTap: () {
+      Get.toNamed(AppRoute.underDevelopmentScreen);
+    },
   ),
   // emptySpace,
   BankCard(
@@ -100,95 +121,104 @@ List<Widget> userCardsList = [
     userEmail: CardSix.userEmail,
     cashNo: CardSix.cashNo,
     cardNo: CardSix.userCardNo,
+
+    onTap: () {
+      Get.toNamed(AppRoute.underDevelopmentScreen);
+    },
   ),
 ];
 
 class BankCard extends StatelessWidget {
   final String bankName, userEmail, cashNo, cardNo;
+  final void Function()? onTap;
   const BankCard(
       {super.key,
       required this.bankName,
       required this.userEmail,
       required this.cashNo,
-      required this.cardNo});
+      required this.cardNo,
+      required this.onTap});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      /*
-       the bank card
-      */
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        /*
+         the bank card
+        */
 
-      padding: const EdgeInsets.all(
-        theDefaultPadding,
-      ),
-      // margin: EdgeInsets.symmetric(
-      //   // horizontal: theDefaultPadding,
-      //   horizontal: 5,
-      // ),
-
-      // width: double.infinity,
-
-      width: Get.width - (theDefaultPadding * 2),
-      height: 220,
-      decoration: BoxDecoration(
-        color: AppColor.kPrimaryColor.withOpacity(.1),
-        borderRadius: BorderRadius.circular(
-          theSmallPadding,
+        padding: const EdgeInsets.all(
+          theDefaultPadding,
         ),
-      ),
-      child: Row(
-        children: [
-          Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // Container(
-                //   decoration: BoxDecoration(
-                //     color: AppColor.kPrimaryColor,
-                //   ),
-                // ),
-                BigTitleBuilder(
-                  theTitle: bankName.toUpperCase(),
-                  textColor: AppColor.kPrimaryColor,
-                ),
-                // emptySpace,
-                Text(
-                  userEmail,
-                ),
+        // margin: EdgeInsets.symmetric(
+        //   // horizontal: theDefaultPadding,
+        //   horizontal: 5,
+        // ),
 
-                Row(
-                  children: [
-                    Text(
-                      '$cashNo : ',
-                    ),
-                    // emptySpace,
-                    Text(
-                      'sdg'.toUpperCase(),
-                    ),
-                  ],
+        // width: double.infinity,
+
+        width: Get.width - (theDefaultPadding * 2),
+        height: 220,
+        decoration: BoxDecoration(
+          color: AppColor.kPrimaryColor.withOpacity(.1),
+          borderRadius: BorderRadius.circular(
+            theSmallPadding,
+          ),
+        ),
+        child: Row(
+          children: [
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Container(
+                  //   decoration: BoxDecoration(
+                  //     color: AppColor.kPrimaryColor,
+                  //   ),
+                  // ),
+                  BigTitleBuilder(
+                    theTitle: bankName.toUpperCase(),
+                    textColor: AppColor.kPrimaryColor,
+                  ),
+                  // emptySpace,
+                  Text(
+                    userEmail,
+                  ),
+
+                  Row(
+                    children: [
+                      Text(
+                        '$cashNo : ',
+                      ),
+                      // emptySpace,
+                      Text(
+                        'sdg'.toUpperCase(),
+                      ),
+                    ],
+                  ),
+                  Text(
+                    // AppConstants.userCardNo,
+                    cardNo,
+                  )
+                ],
+              ),
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Image.asset(
+                  AppImages.moneyIcon,
+                  // color: AppColor.kPrimaryColor,
+                  color: Theme.of(context).iconTheme.color,
+                  width: 70,
+                  // alignment: Alignment.bottom,
                 ),
-                Text(
-                  // AppConstants.userCardNo,
-                  cardNo,
-                )
               ],
             ),
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Image.asset(
-                AppImages.moneyIcon,
-                // color: AppColor.kPrimaryColor,
-                color: Theme.of(context).iconTheme.color,
-                width: 70,
-                // alignment: Alignment.bottom,
-              ),
-            ],
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

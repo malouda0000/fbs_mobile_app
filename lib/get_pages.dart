@@ -4,6 +4,7 @@ import 'package:fbs_mobile_app/view/screens/main%20screen/main_screen.dart';
 import 'package:get/get.dart';
 
 import 'view/screens/custom onbording/custom_onbording.dart';
+import 'view/widgets/shared/under_development_screen.dart';
 
 class AppRoute {
 // app inital
@@ -131,10 +132,10 @@ class GetPages {
 //       page: () => const AboutScreen(),
 //       // bindings: [],
 //     ),
-//     GetPage(
-//       name: AppRoute.underDevelopmentScreen,
-//       page: () => const UnderDevelopment(),
-//     ),
+    GetPage(
+      name: AppRoute.underDevelopmentScreen,
+      page: () => const UnderDevelopment(),
+    ),
 //     GetPage(
 //       name: AppRoute.foodMenueScreen,
 //       page: () => const FoodMenueScreen(),

@@ -1,7 +1,9 @@
 import 'package:fbs_mobile_app/core/constants/app_color.dart';
 import 'package:fbs_mobile_app/core/constants/constants.dart';
+import 'package:fbs_mobile_app/get_pages.dart';
 import 'package:fbs_mobile_app/models/data%20source/bank_services.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ServicesCard extends StatelessWidget {
   final int index;
@@ -15,16 +17,21 @@ class ServicesCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return theBankingservices[index].isUnderDev
-        ? ClipRect(
-            child: Banner(
-              location: BannerLocation.topEnd,
-              child: TheServiceCard(index: index),
-              message: "soon",
-              // color: AppColor.kColorTwo,
-              color: AppColor.kPrimaryColor,
-              // textStyle: Theme.of(context).textTheme.bodySmall!,
+        ? GestureDetector(
+            onTap: () {
+              Get.toNamed(AppRoute.underDevelopmentScreen);
+            },
+            child: ClipRect(
+              child: Banner(
+                location: BannerLocation.topEnd,
+                child: TheServiceCard(index: index),
+                message: "soon",
+                // color: AppColor.kColorTwo,
+                color: AppColor.kPrimaryColor,
+                // textStyle: Theme.of(context).textTheme.bodySmall!,
 
-              // layoutDirection: TextDirection.rtl,
+                // layoutDirection: TextDirection.rtl,
+              ),
             ),
           )
         : TheServiceCard(index: index);
