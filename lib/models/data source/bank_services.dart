@@ -5,17 +5,17 @@ final List<BankServices> theBankingservices = [
   BankServices(
     title: 'telcom services',
     theIcon: Icons.satellite_alt_rounded,
-    isUnderDev: true,
+    isUnderDev: false,
   ),
   BankServices(
     title: 'balance inquiry',
     theIcon: Icons.wallet_rounded,
-    isUnderDev: true,
+    isUnderDev: false,
   ),
   BankServices(
     title: 'internet services',
     theIcon: Icons.network_wifi_rounded,
-    isUnderDev: true,
+    isUnderDev: false,
   ),
   BankServices(
     title: 'money transfare',
@@ -25,7 +25,7 @@ final List<BankServices> theBankingservices = [
   BankServices(
     title: 'fundraising',
     theIcon: Icons.share_rounded,
-    isUnderDev: true,
+    isUnderDev: false,
   ),
 
   ////////////////////
@@ -40,12 +40,12 @@ final List<BankServices> theBankingservices = [
   BankServices(
     title: 'fuel services',
     theIcon: Icons.gas_meter_rounded,
-    isUnderDev: true,
+    isUnderDev: false,
   ),
   BankServices(
     title: 'E-Gove',
     theIcon: Icons.local_police_rounded,
-    isUnderDev: true,
+    isUnderDev: false,
   ),
 
   BankServices(
@@ -56,7 +56,7 @@ final List<BankServices> theBankingservices = [
   BankServices(
     title: 'payees',
     theIcon: Icons.payment_rounded,
-    isUnderDev: true,
+    isUnderDev: false,
   ),
   BankServices(
     title: 'donations',
@@ -66,6 +66,6 @@ final List<BankServices> theBankingservices = [
   BankServices(
     title: 'haboob',
     theIcon: Icons.local_hotel_rounded,
-    isUnderDev: true,
+    isUnderDev: false,
   ),
 ];

@@ -22,7 +22,7 @@ class ServicesCard extends StatelessWidget {
               message: "soon",
               // color: AppColor.kColorTwo,
               color: AppColor.kPrimaryColor,
-              textStyle: Theme.of(context).textTheme.bodySmall!,
+              // textStyle: Theme.of(context).textTheme.bodySmall!,
 
               // layoutDirection: TextDirection.rtl,
             ),

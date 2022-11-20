@@ -2,7 +2,7 @@ import 'package:fbs_mobile_app/core/constants/app_color.dart';
 import 'package:fbs_mobile_app/core/constants/app_images.dart';
 import 'package:fbs_mobile_app/core/constants/constants.dart';
 import 'package:fbs_mobile_app/get_pages.dart';
-import 'package:fbs_mobile_app/view/widgets/shared/auth_container.dart';
+import 'package:fbs_mobile_app/view/screens/auth/widgets/auth_container.dart';
 import 'package:fbs_mobile_app/view/widgets/shared/big_button_builder.dart';
 import 'package:fbs_mobile_app/view/widgets/shared/big_title_builder.dart';
 import 'package:fbs_mobile_app/view/widgets/shared/dont_have_acc_column.dart';

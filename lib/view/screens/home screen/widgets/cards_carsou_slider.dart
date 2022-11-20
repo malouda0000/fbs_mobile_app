@@ -3,7 +3,7 @@ import 'package:fbs_mobile_app/controllers/home_controller.dart';
 import 'package:fbs_mobile_app/core/constants/app_color.dart';
 import 'package:fbs_mobile_app/core/constants/app_images.dart';
 import 'package:fbs_mobile_app/core/constants/constants.dart';
-import 'package:fbs_mobile_app/models/modles/user_cards.dart';
+import 'package:fbs_mobile_app/models/data%20source/user_cards.dart';
 import 'package:fbs_mobile_app/view/widgets/shared/big_title_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
