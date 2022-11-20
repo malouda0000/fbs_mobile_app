@@ -14,17 +14,12 @@ class MainScreen extends StatelessWidget {
     return Scaffold(
       // backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: theDefaultPadding,
-          ),
-          child: GetBuilder<BottomNavBarControllerImp>(
-              builder: (bottomNavBarControllerImp) {
-            return bottomNavBarControllerImp
-                .bodyWidgestsList[bottomNavBarControllerImp.currentBody];
-            // return const Settings();
-          }),
-        ),
+        child: GetBuilder<BottomNavBarControllerImp>(
+            builder: (bottomNavBarControllerImp) {
+          return bottomNavBarControllerImp
+              .bodyWidgestsList[bottomNavBarControllerImp.currentBody];
+          // return const Settings();
+        }),
       ),
       // floatingActionButton: FloatingActionButton(
       //   backgroundColor: AppColor.kPrimaryColor,

@@ -10,31 +10,37 @@ class SuggestedServices extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        BigTitleBuilder(
-          theTitle: 'Suggested Services :',
-          textColor: AppColor.kPrimaryColor,
-        ),
-        emptySpace,
-        GridView.builder(
-            physics: const NeverScrollableScrollPhysics(),
-            shrinkWrap: true,
-            itemCount: theBankingservices.length,
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              // crossAxisCount: 3,
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+        horizontal: theDefaultPadding,
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          BigTitleBuilder(
+            theTitle: 'Suggested Services :',
+            textColor: AppColor.kPrimaryColor,
+          ),
+          emptySpace,
+          GridView.builder(
+              physics: const NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              itemCount: theBankingservices.length,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                // crossAxisCount: 3,
 
-              crossAxisCount: 3,
-              // childAspectRatio: .7,
-              crossAxisSpacing: theDefaultPadding,
-              mainAxisSpacing: theDefaultPadding,
-            ),
-            itemBuilder: (context, index) {
-              return ServicesCard(
-                index: index,
-              );
-            }),
-      ],
+                crossAxisCount: 3,
+                // childAspectRatio: .7,
+                crossAxisSpacing: theDefaultPadding,
+                mainAxisSpacing: theDefaultPadding,
+              ),
+              itemBuilder: (context, index) {
+                return ServicesCard(
+                  index: index,
+                );
+              }),
+        ],
+      ),
     );
   }
 }
