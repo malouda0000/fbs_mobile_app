@@ -48,9 +48,9 @@ class MyApp extends StatelessWidget {
       getPages: GetPages().getpages,
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
       // home: const SigninScreen(),
-      // home: const MainScreen(),
+      home: const MainScreen(),
       // home: const TempTestWidget(),
-      home: const CustomOnBordingScreen(),
+      // home: const CustomOnBordingScreen(),
       // home: const UnderDevelopment(),
 
 /*

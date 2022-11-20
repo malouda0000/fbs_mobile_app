@@ -5,6 +5,7 @@ import 'package:fbs_mobile_app/core/constants/app_images.dart';
 import 'package:fbs_mobile_app/core/constants/constants.dart';
 import 'package:fbs_mobile_app/get_pages.dart';
 import 'package:fbs_mobile_app/view/widgets/shared/big_title_builder.dart';
+import 'package:fbs_mobile_app/view/widgets/shared/communication_row.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -30,6 +31,9 @@ class Settings extends StatelessWidget {
         SettingCard(),
         emptySpace,
         emptySpace,
+        CommunicationRow(),
+        emptySpace,
+        emptySpace,
         emptySpace,
       ],
     );
@@ -43,132 +47,140 @@ class SettingCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: AppColor.kPrimaryColor.withOpacity(.1),
-      child: Column(children: [
-        SettingListTile(
-          theLeading: Icons.person_rounded,
-          theTitle: 'profile',
-          hasTrailing: false,
-          theFunc: () {
-            Get.toNamed(AppRoute.underDevelopmentScreen);
-          },
-        ),
-        SettingListTile(
-          theLeading: Icons.card_membership_rounded,
-          theTitle: 'card management',
-          hasTrailing: false,
-          theFunc: () {
-            Get.toNamed(AppRoute.underDevelopmentScreen);
-          },
-        ),
-        SettingListTile(
-          theLeading: Icons.card_giftcard_rounded,
-          theTitle: 'request fbs card',
-          hasTrailing: false,
-          theFunc: () {
-            Get.toNamed(AppRoute.underDevelopmentScreen);
-          },
-        ),
-        SettingListTile(
-          theLeading: Icons.wallet_rounded,
-          theTitle: 'manage mobile wallet',
-          hasTrailing: false,
-          theFunc: () {
-            Get.toNamed(AppRoute.underDevelopmentScreen);
-          },
-        ),
-        SettingListTile(
-          theLeading: Icons.electric_rickshaw_rounded,
-          theTitle: 'electrincity',
-          hasTrailing: false,
-          theFunc: () {
-            Get.toNamed(AppRoute.underDevelopmentScreen);
-          },
-        ),
-        SettingListTile(
-          theLeading: Icons.phone_rounded,
-          theTitle: 'manage phone',
-          hasTrailing: false,
-          theFunc: () {
-            Get.toNamed(AppRoute.underDevelopmentScreen);
-          },
-        ),
-        SettingListTile(
-          theLeading: Icons.dark_mode_rounded,
-          theTitle: 'dark mode',
-          hasTrailing: true,
-          theFunc: () {
-            // Get.toNamed(AppRoute.underDevelopmentScreen);
-          },
-          theTrailing:
-              //     GetBuilder<ThemeControllerImp>(builder: (themeControllerImp) {
-              //   return Switch(
-              //     activeColor: AppColor.kPrimaryColor,
-              //     inactiveThumbColor: AppColor.kColorTwo,
-              //     value: themeControllerImp.isDarkMod,
-              //     onChanged: (value) {
-              //       themeControllerImp.changeDarkMod(value);
-              //     },
-              //   );
-              // }
-              // , ),
+    return Material(
+      clipBehavior: Clip.hardEdge,
+      borderRadius: BorderRadius.circular(
+        theSmallPadding,
+      ),
 
-              ////////////////////////
-              ///
-
-              ObxValue(
-            (data) => Switch(
-              // activeColor: Theme.of(context).iconTheme.color,
-              activeColor: AppColor.kPrimaryColor,
-              // inactiveThumbColor: AppColor.kColorTwo,
-              inactiveThumbColor: Theme.of(context).iconTheme.color,
-              value: themeControllerImp.isDarkMod.value,
-              onChanged: (val) {
-                themeControllerImp.changeThemeMode(val);
-              },
-            ),
-            false.obs,
+      // color: AppColor.kPrimaryColor.withOpacity(.1),
+      color: AppColor.kColorTwo.withOpacity(.3),
+      child: Column(
+        children: [
+          SettingListTile(
+            theLeading: Icons.person_rounded,
+            theTitle: 'profile',
+            hasTrailing: false,
+            theFunc: () {
+              Get.toNamed(AppRoute.underDevelopmentScreen);
+            },
           ),
-        ),
-        SettingListTile(
-          theLeading: Icons.language_rounded,
-          theTitle: 'language',
-          hasTrailing: false,
-          theFunc: () {
-            Get.toNamed(AppRoute.underDevelopmentScreen);
-          },
-        ),
-        SettingListTile(
-          theLeading: Icons.info_rounded,
-          theTitle: 'about and contact',
-          hasTrailing: false,
-          theFunc: () {
-            Get.toNamed(AppRoute.underDevelopmentScreen);
-          },
-        ),
-        SettingListTile(
-          theLeading: Icons.security_rounded,
-          theTitle: 'security',
-          hasTrailing: false,
-          theFunc: () {
-            Get.toNamed(AppRoute.underDevelopmentScreen);
-          },
-        ),
-        SettingListTile(
-          theLeading: Icons.logout_rounded,
-          theTitle: 'sign out',
-          hasTrailing: false,
-          theFunc: () {
-            Get.toNamed(AppRoute.underDevelopmentScreen);
-          },
-        ),
-        Container(
-          height: 3,
-          width: double.infinity,
-          color: AppColor.kPrimaryColor,
-        ),
-      ]),
+          SettingListTile(
+            theLeading: Icons.card_membership_rounded,
+            theTitle: 'card management',
+            hasTrailing: false,
+            theFunc: () {
+              Get.toNamed(AppRoute.underDevelopmentScreen);
+            },
+          ),
+          SettingListTile(
+            theLeading: Icons.card_giftcard_rounded,
+            theTitle: 'request fbs card',
+            hasTrailing: false,
+            theFunc: () {
+              Get.toNamed(AppRoute.underDevelopmentScreen);
+            },
+          ),
+          SettingListTile(
+            theLeading: Icons.wallet_rounded,
+            theTitle: 'manage mobile wallet',
+            hasTrailing: false,
+            theFunc: () {
+              Get.toNamed(AppRoute.underDevelopmentScreen);
+            },
+          ),
+          SettingListTile(
+            theLeading: Icons.electric_rickshaw_rounded,
+            theTitle: 'electrincity',
+            hasTrailing: false,
+            theFunc: () {
+              Get.toNamed(AppRoute.underDevelopmentScreen);
+            },
+          ),
+          SettingListTile(
+            theLeading: Icons.phone_rounded,
+            theTitle: 'manage phone',
+            hasTrailing: false,
+            theFunc: () {
+              Get.toNamed(AppRoute.underDevelopmentScreen);
+            },
+          ),
+          SettingListTile(
+            theLeading: Icons.dark_mode_rounded,
+            theTitle: 'dark mode',
+            hasTrailing: true,
+            theFunc: () {
+              // Get.toNamed(AppRoute.underDevelopmentScreen);
+            },
+            theTrailing:
+                //     GetBuilder<ThemeControllerImp>(builder: (themeControllerImp) {
+                //   return Switch(
+                //     activeColor: AppColor.kPrimaryColor,
+                //     inactiveThumbColor: AppColor.kColorTwo,
+                //     value: themeControllerImp.isDarkMod,
+                //     onChanged: (value) {
+                //       themeControllerImp.changeDarkMod(value);
+                //     },
+                //   );
+                // }
+                // , ),
+
+                ////////////////////////
+                ///
+
+                ObxValue(
+              (data) => Switch(
+                // activeColor: Theme.of(context).iconTheme.color,
+                activeColor: AppColor.kPrimaryColor,
+                // inactiveThumbColor: AppColor.kColorTwo,
+                inactiveThumbColor: Theme.of(context).iconTheme.color,
+                value: themeControllerImp.isDarkMod.value,
+                onChanged: (val) {
+                  themeControllerImp.changeThemeMode(val);
+                },
+              ),
+              false.obs,
+            ),
+          ),
+          SettingListTile(
+            theLeading: Icons.language_rounded,
+            theTitle: 'language',
+            hasTrailing: false,
+            theFunc: () {
+              Get.toNamed(AppRoute.underDevelopmentScreen);
+            },
+          ),
+          SettingListTile(
+            theLeading: Icons.info_rounded,
+            theTitle: 'about and contact',
+            hasTrailing: false,
+            theFunc: () {
+              Get.toNamed(AppRoute.underDevelopmentScreen);
+            },
+          ),
+          SettingListTile(
+            theLeading: Icons.security_rounded,
+            theTitle: 'security',
+            hasTrailing: false,
+            theFunc: () {
+              Get.toNamed(AppRoute.underDevelopmentScreen);
+            },
+          ),
+          SettingListTile(
+            theLeading: Icons.logout_rounded,
+            theTitle: 'sign out',
+            hasTrailing: false,
+            theFunc: () {
+              Get.toNamed(AppRoute.underDevelopmentScreen);
+            },
+          ),
+          Container(
+            height: 3,
+            width: double.infinity,
+            color: AppColor.kPrimaryColor,
+          ),
+        ],
+      ),
     );
   }
 }
@@ -216,8 +228,14 @@ class UserCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: AppColor.kPrimaryColor.withOpacity(.1),
+    return Material(
+      borderRadius: BorderRadius.circular(
+        theSmallPadding,
+      ),
+      // color: AppColor.kColorTwo.withOpacity(.3),
+      color: AppColor.kColorTwo.withOpacity(.3),
+      // elevation: theSmallPadding,
+      // shadowColor: AppColor.kPrimaryColor,
       clipBehavior: Clip.hardEdge,
       child: Column(
         children: [

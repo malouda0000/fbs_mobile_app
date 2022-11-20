@@ -13,7 +13,7 @@ abstract class BottomNavBarController extends GetxController {
 class BottomNavBarControllerImp extends BottomNavBarController {
   // late PageController pageController;
   // TabController bottNavTapCont = 0;
-  int currentBody = 2;
+  int currentBody = 4;
   List<Widget> bodyWidgestsList = const [
     // Expanded(
     //   child: Container(
