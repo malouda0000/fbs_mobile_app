@@ -4,6 +4,7 @@ import 'package:fbs_mobile_app/core/constants/app_color.dart';
 import 'package:fbs_mobile_app/core/constants/app_images.dart';
 import 'package:fbs_mobile_app/core/constants/constants.dart';
 import 'package:fbs_mobile_app/get_pages.dart';
+import 'package:fbs_mobile_app/view/screens/settings/widgets/reserved_row.dart';
 import 'package:fbs_mobile_app/view/widgets/shared/big_title_builder.dart';
 import 'package:fbs_mobile_app/view/widgets/shared/communication_row.dart';
 import 'package:flutter/material.dart';
@@ -32,6 +33,9 @@ class Settings extends StatelessWidget {
         emptySpace,
         emptySpace,
         CommunicationRow(),
+        emptySpace,
+        emptySpace,
+        ReservedRow(),
         emptySpace,
         emptySpace,
         emptySpace,
