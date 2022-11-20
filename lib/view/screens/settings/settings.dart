@@ -119,8 +119,10 @@ class SettingCard extends StatelessWidget {
 
               ObxValue(
             (data) => Switch(
+              // activeColor: Theme.of(context).iconTheme.color,
               activeColor: AppColor.kPrimaryColor,
-              inactiveThumbColor: AppColor.kColorTwo,
+              // inactiveThumbColor: AppColor.kColorTwo,
+              inactiveThumbColor: Theme.of(context).iconTheme.color,
               value: themeControllerImp.isDarkMod.value,
               onChanged: (val) {
                 themeControllerImp.changeThemeMode(val);
