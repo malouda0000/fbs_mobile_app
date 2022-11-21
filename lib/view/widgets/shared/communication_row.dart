@@ -11,7 +11,9 @@ class CommunicationRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: AppColor.kColorTwo.withOpacity(.3),
+      // color: AppColor.kColorTwo.withOpacity(.3),
+      color: Theme.of(context).chipTheme.backgroundColor,
+
       clipBehavior: Clip.hardEdge,
       borderRadius: BorderRadius.circular(theSmallPadding),
       child: Column(

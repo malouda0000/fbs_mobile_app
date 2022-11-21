@@ -30,4 +30,9 @@ class AppColor {
   static const kTextBlacColor = Color.fromRGBO(0, 0, 0, 1);
   static const theMainLightColor = Colors.white;
   static const kGrayColor = Color.fromRGBO(235, 235, 235, 1);
+
+  // static var containerBackgroundColor = ThemeMode.dark == true
+  //     // ? AppColor.kPrimaryColor.withOpacity(.3)
+  //     ? AppColor.kPrimaryColor
+  //     : AppColor.kColorTwo.withOpacity(.3);
 }

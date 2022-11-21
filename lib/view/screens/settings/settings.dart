@@ -62,7 +62,9 @@ class SettingCard extends StatelessWidget {
       ),
 
       // color: AppColor.kPrimaryColor.withOpacity(.1),
-      color: AppColor.kColorTwo.withOpacity(.3),
+      // color: AppColor.kColorTwo.withOpacity(.3),
+      color: Theme.of(context).chipTheme.backgroundColor,
+
       child: Column(
         children: [
           SettingListTile(
@@ -241,7 +243,9 @@ class UserCard extends StatelessWidget {
         theSmallPadding,
       ),
       // color: AppColor.kColorTwo.withOpacity(.3),
-      color: AppColor.kColorTwo.withOpacity(.3),
+      // color: AppColor.kColorTwo.withOpacity(.3),
+      color: Theme.of(context).chipTheme.backgroundColor,
+
       // elevation: theSmallPadding,
       // shadowColor: AppColor.kPrimaryColor,
       clipBehavior: Clip.hardEdge,

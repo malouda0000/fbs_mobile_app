@@ -24,7 +24,9 @@ class RectangularIcon extends StatelessWidget {
         // ),
         decoration: BoxDecoration(
           // color: AppColor.kColorThree,
-          color: AppColor.kPrimaryColor.withOpacity(.1),
+          // color: AppColor.kPrimaryColor.withOpacity(.1),
+          color: Theme.of(context).chipTheme.backgroundColor,
+
           // color: AppColor.kLightPrimaryColor,
           borderRadius: BorderRadius.circular(theSmallPadding),
         ),

@@ -1,6 +1,6 @@
 import 'package:fbs_mobile_app/controllers/theme_controller.dart';
 import 'package:fbs_mobile_app/core/constants/app_color.dart';
-import 'package:fbs_mobile_app/core/constants/my_themes.dart';
+import 'package:fbs_mobile_app/core/themes/my_themes.dart';
 import 'package:fbs_mobile_app/get_pages.dart';
 import 'package:fbs_mobile_app/models/modles/custom_onbording.dart';
 import 'package:fbs_mobile_app/temp_test_widgets.dart';
@@ -48,9 +48,9 @@ class MyApp extends StatelessWidget {
       getPages: GetPages().getpages,
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
       // home: const SigninScreen(),
-      home: const MainScreen(),
+      // home: const MainScreen(),
       // home: const TempTestWidget(),
-      // home: const CustomOnBordingScreen(),
+      home: const CustomOnBordingScreen(),
       // home: const UnderDevelopment(),
 
 /*

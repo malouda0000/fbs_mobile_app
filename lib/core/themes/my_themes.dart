@@ -8,6 +8,10 @@ class MyThemes {
 
     // ),
     // splashColor: AppColor.kPrimaryColor,
+    chipTheme: ChipThemeData(
+      backgroundColor: AppColor.kColorTwo.withOpacity(.3),
+    ),
+
     shadowColor: AppColor.kTextColor.withOpacity(.3),
     primaryColor: AppColor.kPrimaryColor,
     iconTheme: const IconThemeData(color: AppColor.kTextColor),
@@ -38,7 +42,16 @@ class MyThemes {
       ),
     ),
   );
+
+  ////////////////////////////////////////////
+  ////
+  ////
+  //////////////////////////////////////
+
   static ThemeData customDarkTheme = ThemeData.dark().copyWith(
+    chipTheme: ChipThemeData(
+      backgroundColor: AppColor.kPrimaryColor.withOpacity(.25),
+    ),
     shadowColor: Colors.black.withOpacity(.7),
     primaryColor: AppColor.kPrimaryColor,
     iconTheme: IconThemeData(

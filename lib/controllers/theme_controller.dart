@@ -1,4 +1,4 @@
-import 'package:fbs_mobile_app/core/constants/my_themes.dart';
+import 'package:fbs_mobile_app/core/themes/my_themes.dart';
 import 'package:fbs_mobile_app/main.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

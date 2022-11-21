@@ -50,7 +50,8 @@ class TheServiceCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: AppColor.kPrimaryColor.withOpacity(.1),
+          // color: AppColor.kPrimaryColor.withOpacity(.3),
+          color: Theme.of(context).chipTheme.backgroundColor,
           borderRadius: BorderRadius.circular(
             theSmallPadding,
           )),
