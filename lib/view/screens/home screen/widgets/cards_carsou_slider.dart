@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:fbs_mobile_app/controllers/home_controller.dart';
 import 'package:fbs_mobile_app/core/constants/app_color.dart';
@@ -148,81 +150,114 @@ class BankCard extends StatelessWidget {
          the bank card
         */
 
-        padding: const EdgeInsets.all(
-          theDefaultPadding,
-        ),
         // margin: EdgeInsets.symmetric(
         //   // horizontal: theDefaultPadding,
         //   horizontal: 5,
         // ),
 
         // width: double.infinity,
+        clipBehavior: Clip.hardEdge,
 
         width: Get.width - (theDefaultPadding * 2),
         height: 220,
         decoration: BoxDecoration(
-          color: AppColor.kPrimaryColor.withOpacity(.1),
+          // color: AppColor.kPrimaryColor.withOpacity(.1),
           borderRadius: BorderRadius.circular(
             theSmallPadding,
           ),
+          image: DecorationImage(
+            image: AssetImage(
+              _cardsBackgroundImages[Random().nextInt(
+                _cardsBackgroundImages.length,
+              )],
+            ),
+            fit: BoxFit.cover,
+            // colorFilter: ColorFilter.linearToSrgbGamma(),
+            // opacity: .5,
+          ),
         ),
-        child: Row(
-          children: [
-            Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  // Container(
-                  //   decoration: BoxDecoration(
-                  //     color: AppColor.kPrimaryColor,
-                  //   ),
-                  // ),
-                  BigTitleBuilder(
-                    theTitle: bankName.toUpperCase(),
-                    textColor: AppColor.kPrimaryColor,
-                  ),
-                  // emptySpace,
-                  Text(
-                    userEmail,
-                  ),
+        child: Container(
+          padding: const EdgeInsets.all(
+            theDefaultPadding,
+          ),
+          color: Colors.black.withOpacity(.7),
+          // color: AppColor.kColorTwo.withOpacity(.7),
+          child: Row(
+            children: [
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Container(
+                    //   decoration: BoxDecoration(
+                    //     color: AppColor.kPrimaryColor,
+                    //   ),
+                    // ),
+                    BigTitleBuilder(
+                      theTitle: bankName.toUpperCase(),
+                      textColor: AppColor.kPrimaryColor,
+                    ),
+                    // emptySpace,
+                    Text(
+                      userEmail,
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
 
-                  Row(
-                    children: [
-                      Text(
-                        '$cashNo : ',
+                    Row(
+                      children: [
+                        Text(
+                          '$cashNo : ',
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                        // emptySpace,
+                        Text(
+                          'sdg'.toUpperCase(),
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Text(
+                      // AppConstants.userCardNo,
+                      cardNo,
+                      style: TextStyle(
+                        color: Colors.white,
                       ),
-                      // emptySpace,
-                      Text(
-                        'sdg'.toUpperCase(),
-                      ),
-                    ],
+                    )
+                  ],
+                ),
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Image.asset(
+                    AppImages.moneyIcon,
+                    color: AppColor.kPrimaryColor,
+                    // color: Theme.of(context).iconTheme.color,
+                    width: 70,
+                    // alignment: Alignment.bottom,
                   ),
-                  Text(
-                    // AppConstants.userCardNo,
-                    cardNo,
-                  )
                 ],
               ),
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Image.asset(
-                  AppImages.moneyIcon,
-                  // color: AppColor.kPrimaryColor,
-                  color: Theme.of(context).iconTheme.color,
-                  width: 70,
-                  // alignment: Alignment.bottom,
-                ),
-              ],
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
   }
 }
+
+List<String> _cardsBackgroundImages = [
+  AppImages.cardOne,
+  AppImages.cardTwo,
+  AppImages.cardThree,
+];
 
 class CarouslSlidingDots extends StatelessWidget {
   const CarouslSlidingDots({

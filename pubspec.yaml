@@ -47,7 +47,7 @@ dependencies:
   
   # local files 
   # sqflite: ^2.0.3
-  # flutter_svg: ^1.1.1+1
+  flutter_svg: ^1.1.6
   shared_preferences: ^2.0.15
   # iconsax: ^0.0.8
   # flutter_remix: ^0.0.1
@@ -165,6 +165,7 @@ flutter:
 
   assets:
     - assets/fbs/
+    - assets/fbs cards images/
     - assets/images/
 
   fonts:
