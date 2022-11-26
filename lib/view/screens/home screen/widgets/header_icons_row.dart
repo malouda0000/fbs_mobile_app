@@ -25,7 +25,7 @@ class HeaderIconsRow extends StatelessWidget {
           // emptySpace,
           BigTitleBuilder(
             theTitle: AppConstants.userName,
-            textColor: AppColor.kPrimaryColor,
+            textColor: AppColor.kColorTwo,
           ),
           // emptySpace,
           Row(

@@ -282,7 +282,6 @@ class CarouslSlidingDots extends StatelessWidget {
                   height: 6,
                   margin: const EdgeInsets.all(
                     // theDefaultPadding,
-
                     2,
                   ),
                   decoration: BoxDecoration(

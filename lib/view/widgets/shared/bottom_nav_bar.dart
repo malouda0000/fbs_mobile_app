@@ -16,7 +16,7 @@ class BottomNavBar extends StatelessWidget {
     return ConvexAppBar(
       // height: 55,
       // color: AppColor.pr,
-      backgroundColor: AppColor.kPrimaryColor,
+      backgroundColor: AppColor.kColorTwo,
       // controller: ,
       height: 45,
       top: -25,

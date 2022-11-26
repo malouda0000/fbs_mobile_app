@@ -167,7 +167,7 @@ flutter:
     - assets/fbs/
     - assets/fbs cards images/
     - assets/images/
-
+    
   fonts:
     - family: Cairo
       fonts:

@@ -24,7 +24,7 @@ class SuggestedServices extends StatelessWidget {
         children: [
           BigTitleBuilder(
             theTitle: 'Suggested Services :',
-            textColor: AppColor.kPrimaryColor,
+            textColor: AppColor.kColorTwo,
           ),
           emptySpace,
           GridView.builder(
